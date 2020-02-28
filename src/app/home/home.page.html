@@ -1,7 +1,7 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="header">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Lesson planner
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,50 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Lesson planner</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col>
+          <div class="inputs-section">
+            <div class="inputs-container">
+
+              <ion-item>
+                <ion-label>Students</ion-label>
+                <ion-input class="students-input" value="8"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Start</ion-label>
+                <ion-datetime displayFormat="HH:mm" value="2020-10-10T10:25:00.000"></ion-datetime>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Break length</ion-label>
+                <ion-input class="break-input" value="10"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>End</ion-label>
+                <ion-datetime displayFormat="HH:mm" value="2020-10-10T13:30:00.000"></ion-datetime>
+              </ion-item>
+
+            </div>
+          </div>
+
+        </ion-col>
+
+        <ion-col>
+          <div class="część na rezultaty">
+            Results
+          </div>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+
   </div>
 </ion-content>
