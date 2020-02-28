@@ -11,7 +11,15 @@
             <div class="home-container">
               <ion-item>
                 <ion-label>Students</ion-label>
-                <ion-input clearOnFocus="true" class="students-input" [(ngModel)]="studentsCount" name="studentsCount" clearOnEdit="true"></ion-input>
+                <ion-input
+                  clearOnFocus="true"
+                  class="students-input"
+                  [(ngModel)]="studentsCount"
+                  name="studentsCount"
+                  clearOnEdit="true"
+                  (change)="calculateTerms()"
+                >
+                </ion-input>
               </ion-item>
 
               <ion-item>
@@ -21,7 +29,15 @@
 
               <ion-item>
                 <ion-label><span>Break</span><span class="inputs-container-label_small">(min)</span></ion-label>
-                <ion-input clearOnFocus class="break-input" [(ngModel)]="breakLength" name="breakLength" clearOnEdit="true"></ion-input>
+                <ion-input
+                  clearOnFocus
+                  class="break-input"
+                  [(ngModel)]="breakLength"
+                  name="breakLength"
+                  clearOnEdit="true"
+                  (change)="calculateTerms()"
+                >
+                </ion-input>
               </ion-item>
 
               <ion-item>
@@ -50,8 +66,8 @@
             </div>
           </section>
         </ion-col>
-
       </ion-row>
+
     </ion-grid>
 
   </div>
