@@ -5,17 +5,23 @@
   right: 0;
 }
 
-.inputs-section {
+.home-section {
   border: 2px solid navy;
   border-radius: 15px;
   padding: 4px 10px;
   background: navy;
 }
 
-.inputs-container {
+.home-container {
   background: white;
   padding: 10px;
   border-radius: 10px;
+}
+
+.home-container-label_small {
+  margin-left: 2px;
+  color: gray;
+  font-size: 12px;
 }
 
 .header {
