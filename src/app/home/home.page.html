@@ -52,6 +52,7 @@
                   displayFormat="HH:mm"
                   [(ngModel)]="endDate"
                   name="endDate"
+                  (ionBlur)="calculateTerms()"
                 ></ion-datetime>
               </ion-item>
             </div>
