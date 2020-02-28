@@ -1,9 +1,5 @@
 <ion-header [translucent]="true" class="header">
-  <ion-toolbar>
-    <ion-title>
-      Lesson planner
-    </ion-title>
-  </ion-toolbar>
+  <ion-toolbar><ion-title>Lesson planner</ion-title></ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -19,10 +15,9 @@
         <ion-col size="12" size-sm>
           <section class="home-section">
             <div class="home-container">
-
               <ion-item>
                 <ion-label>Students</ion-label>
-                <ion-input class="students-input" [(ngModel)]="studentsCount" name="studentsCount" clearOnEdit="true"></ion-input>
+                <ion-input clearOnFocus="true" class="students-input" [(ngModel)]="studentsCount" name="studentsCount" clearOnEdit="true"></ion-input>
               </ion-item>
 
               <ion-item>
@@ -32,17 +27,15 @@
 
               <ion-item>
                 <ion-label><span>Break</span><span class="inputs-container-label_small">(min)</span></ion-label>
-                <ion-input class="break-input" [(ngModel)]="breakLength" name="breakLength" clearOnEdit="true"></ion-input>
+                <ion-input clearOnFocus class="break-input" [(ngModel)]="breakLength" name="breakLength" clearOnEdit="true"></ion-input>
               </ion-item>
 
               <ion-item>
                 <ion-label>End</ion-label>
                 <ion-datetime displayFormat="HH:mm" [(ngModel)]="endDate" name="endDate"></ion-datetime>
               </ion-item>
-
             </div>
           </section>
-
         </ion-col>
 
         <ion-col size="12" size-sm>
