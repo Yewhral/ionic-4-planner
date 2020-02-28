@@ -24,6 +24,39 @@
   font-size: 12px;
 }
 
+.terms-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.terms-list_item {
+  height: 49px;
+  border-bottom: 1px solid gray;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 5px
+}
+
+.terms-list_item-date {
+  width: 80px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 8px;
+}
+
+.human-input {
+  display: flex;
+  height: 30px;
+  width: 30px;
+}
+
+.terms-list_item-student {
+  text-align: left;
+  text-transform: capitalize;
+}
+
 .header {
   text-align: center;
 }
