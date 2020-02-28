@@ -30,20 +30,11 @@
   margin: 0;
 }
 
-.terms-list_item {
-  height: 49px;
-  border-bottom: 1px solid gray;
-  display: flex;
-  align-items: flex-end;
-  padding-bottom: 5px
-}
-
 .terms-list_item-date {
-  width: 80px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding-bottom: 8px;
+  margin-right: 5px;
 }
 
 .human-input {

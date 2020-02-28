@@ -48,8 +48,8 @@
         <ion-col size="12" size-sm>
           <section class="home-section">
             <div class="home-container">
-              <ul class="terms-list">
-                <li *ngFor="let term of terms" class="terms-list_item">
+              <ion-list>
+                <ion-item *ngFor="let term of terms">
                   <div class="terms-list_item-date">{{term.date}}</div>
                   <div *ngIf="!term.break; else elseBlock">
                     <ion-input name="student" class="terms-list_item-student"></ion-input>
@@ -57,8 +57,8 @@
                   <ng-template #elseBlock>
                     <ion-input name="student" disabled class="terms-list_item-student" value="Break time"></ion-input>
                   </ng-template>
-                </li>
-              </ul>                
+                </ion-item>
+              </ion-list>                
             </div>
           </section>
         </ion-col>
