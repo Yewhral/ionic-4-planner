@@ -57,6 +57,9 @@
               </ion-item>
             </div>
           </section>
+          <div *ngFor="let error of errors">
+            <p class="error">{{error}}</p>
+          </div>
         </ion-col>
 
         <ion-col size="12" size-sm>
