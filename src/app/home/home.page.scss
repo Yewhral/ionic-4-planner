@@ -34,7 +34,10 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  margin-right: 5px;
+}
+
+.terms-list_item-separator {
+  margin: 0 5px;
 }
 
 .human-input {
@@ -50,6 +53,10 @@
 
 .header {
   text-align: center;
+}
+
+.header-title {
+  color: navy;
 }
 
 .students-input,

@@ -1,14 +1,8 @@
 <ion-header [translucent]="true" class="header">
-  <ion-toolbar><ion-title>Lesson planner</ion-title></ion-toolbar>
+  <ion-toolbar><ion-title class="header-title">- Lesson planner -</ion-title></ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Lesson planner</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <div id="container">
     <ion-grid fixed>
       <ion-row>
@@ -44,8 +38,9 @@
               <ion-list>
                 <ion-item *ngFor="let term of terms">
                   <div class="terms-list_item-date">{{term.date}}</div>
+                  <div class="terms-list_item-separator">-</div>
                   <div *ngIf="!term.break; else elseBlock">
-                    <ion-input name="student" class="terms-list_item-student"></ion-input>
+                    <ion-input name="student" class="terms-list_item-student" placeholder="Student name"></ion-input>
                   </div>
                   <ng-template #elseBlock>
                     <ion-input name="student" disabled class="terms-list_item-student" value="Break time"></ion-input>
