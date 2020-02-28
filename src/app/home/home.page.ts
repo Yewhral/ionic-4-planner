@@ -13,13 +13,7 @@ interface term {
 })
 
 export class HomePage {
-  terms: term[] = [ // TODO: onInit calculate()
-    { date:"10:25" },
-    { date: "11:00" },
-    { date: "12:00", break: true },
-    { date: "13:00" },
-    { date: "15:00" }
-  ];
+  terms: term[] = [];
   studentsCount: number = 8;
   breakLength: number = 10;
   startDate: string = "2020-10-10T10:25:00.000";
@@ -27,6 +21,10 @@ export class HomePage {
   errors: Array<string> = null;
 
   constructor() {}
+
+  ngOnInit() {
+    this.calculateTerms();
+  };
 
   validateFields = () => {
     const errorsList = []
@@ -41,7 +39,7 @@ export class HomePage {
     }
     this.errors = errorsList;
     return errorsList;
-  }
+  };
 
   calculateTerms = () => {
     const errors = this.validateFields();
@@ -49,13 +47,15 @@ export class HomePage {
     const termsList = [];
     const breaksAmount = 1;
     const recordsAmount = +this.studentsCount + breaksAmount;
-    const breakTime = 3; // TODO: CHANGE BREAK TIME
+    const breakTime = +this.studentsCount % 2 === 0
+      ? this.studentsCount / 2
+      : ((+this.studentsCount + 1) / 2);
     let currentTime = moment(this.startDate);
     const availableTimeInMinutes = moment(this.endDate).diff(moment(this.startDate), 'minutes');
     const timeForOneStudent = (availableTimeInMinutes - (breaksAmount * this.breakLength)) / this.studentsCount;
  
     for(let i = 0; i < recordsAmount; i++) {
-      if(i === breakTime) { // TODO: CHANGE BREAK TIME
+      if(i === breakTime) {
         termsList.push({ date: moment(currentTime).format('HH:mm'), break: true })
         currentTime.add(this.breakLength, 'minutes')
       } else {
@@ -65,6 +65,6 @@ export class HomePage {
     }
     
     this.terms = termsList;
-  }
+  };
 
 }

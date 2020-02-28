@@ -24,7 +24,13 @@
 
               <ion-item>
                 <ion-label>Start</ion-label>
-                <ion-datetime displayFormat="HH:mm" [(ngModel)]="startDate" name="startDate"></ion-datetime>
+                <ion-datetime
+                  displayFormat="HH:mm"
+                  [(ngModel)]="startDate"
+                  name="startDate"
+                  (ionBlur)="calculateTerms()"
+                >
+                </ion-datetime>
               </ion-item>
 
               <ion-item>
@@ -42,7 +48,11 @@
 
               <ion-item>
                 <ion-label>End</ion-label>
-                <ion-datetime displayFormat="HH:mm" [(ngModel)]="endDate" name="endDate"></ion-datetime>
+                <ion-datetime
+                  displayFormat="HH:mm"
+                  [(ngModel)]="endDate"
+                  name="endDate"
+                ></ion-datetime>
               </ion-item>
             </div>
           </section>
