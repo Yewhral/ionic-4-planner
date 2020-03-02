@@ -13,7 +13,7 @@
 }
 
 .home-container {
-  background: white;
+  background:var(--ion-color-primary-contrast) ;
   padding: 10px;
   border-radius: 10px;
 }
@@ -56,7 +56,7 @@
 }
 
 .header-title {
-  color: var(--ion-color-primary);
+  color: var(--header-title-color);
 }
 
 .students-input,
