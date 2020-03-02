@@ -6,10 +6,10 @@
 }
 
 .home-section {
-  border: 2px solid navy;
+  border: 2px solid var(--ion-color-primary);
   border-radius: 15px;
   padding: 4px 10px;
-  background: navy;
+  background: var(--ion-color-primary);
 }
 
 .home-container {
@@ -56,7 +56,7 @@
 }
 
 .header-title {
-  color: navy;
+  color: var(--ion-color-primary);
 }
 
 .students-input,
